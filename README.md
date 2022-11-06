@@ -14,6 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Web3youtube-Mock
 - 使用したtech stacks: 
+  - 準同型暗号
   - フロント:
     - 言語：TypeScript
     - ライブラリ：React
