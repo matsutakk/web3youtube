@@ -6,14 +6,14 @@ import { ConnectButton} from "@rainbow-me/rainbowkit";
 import { useAccount } from 'wagmi';
 import { ethers } from 'ethers';
 
-import video from "./data/video"
-import videoData from './data/type';
+import video from "../data/video"
+import videoData from '../data/type';
 import { useEffect, useState } from 'react';
 import contractAddress from "../const/address.json";
 import abi from "../const/abi.json";
 import {publicKey} from "../const/paillier";
 import { PublicKey } from 'paillier-bigint';
-import genreMap from './data/genre';
+import genreMap from '../data/genre';
 
 export default function Home() {
   const {isConnected} = useAccount();
