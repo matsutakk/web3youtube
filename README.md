@@ -18,17 +18,30 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Web3youtube-Mock
+- 使用したtech stacks: 
+  - フロント:
+    - 言語：TypeScript
+    - ライブラリ：React
+    - フレームワーク：Next.js
+  - スマートコントラクト
+    - 言語：Solidity
+    - 開発環境：Hardhat
 
-To learn more about Next.js, take a look at the following resources:
+- 使用したBlockchain：Ethereum (Goerli)
+- deployしたContract(ExplorerでOK)
+  - [link](https://goerli.etherscan.io/address/0xC0D507226e73e4bCeED5a46F35cF07c1b7C9f077)
+  - Address：0xC0D507226e73e4bCeED5a46F35cF07c1b7C9f077
+- application codeやその他のfile
+- テスト手順を含むリポジトリへのリンク
+  - Please check this repository, [smart contracts](https://github.com/matsutakk/SecureDataCollect-), [frontend2](https://github.com/matsutakk/web3twitter). 
+  - Also our video include the information of screen transition
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 審査やテストのためにプロジェクトにアクセスする方法など
+  - https://web3youtube.vercel.app/
+  - https://web3youtube-pc3i.vercel.app/
+  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 概要
+視聴履歴やクリック回数などのユーザーデータを、準同型暗号によって暗号化してイーサリアム上に保存する。
+データの属性はジャンルで表現する。例えば、["恋愛系", "音楽系", "お笑い系"]として音楽動画をクリックした場合、ベクトル[0,1,0]を暗号化してスマートコントラクトに送信し、準同型暗号によって今までの視聴履歴ベクトルと足し算を行うことで視聴履歴(どんなジャンルを何回クリックしたか)を更新する。
