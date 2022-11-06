@@ -39,7 +39,7 @@ export default function Home() {
   const videoListPage = (): JSX.Element => {
     return (
         <div className={styles.grid}>
-          {video.map((item: videoData)=>{
+          {video.map((item: videoData, index: number)=>{
             return (
               <a  
                   href={item.link}
@@ -47,6 +47,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => clickhandler(item.genre)}
+                  key={index}
               >
                 <h2>{item.title}</h2>
                 <img src={item.thumbnail} alt="Logo" style={{width:"250px"}}/>
