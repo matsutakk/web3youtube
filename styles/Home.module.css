@@ -41,7 +41,7 @@
 
 .title {
   margin: 0;
-  line-height: 1.15;
+  line-height: 2.15;
   font-size: 4rem;
 }
 
@@ -54,6 +54,13 @@
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
 }
 
 .code {
@@ -70,7 +77,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 100%;
 }
 
 .card {
@@ -83,6 +90,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  max-height: 1000px;
 }
 
 .card:hover,
